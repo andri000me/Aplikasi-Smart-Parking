@@ -1,43 +1,37 @@
 <!DOCTYPE html>
 <html>
-	<head>
 		<title>Smart Parking</title>
 		<link rel="stylesheet" type="text/css" href="assets/css/master.css">
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Allura|Andika|Merriweather|Cookie|Economica|Shrikhand|Mrs+Saint+Delafield|Qwigley|Ubuntu">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<style type="text/css">
-			body {
-				background-image: url(assets/img/21.jpg);
-				background-size: 100%; 
-				background-repeat : no-repeat; 
-			}
-			a{
-				text-decoration: none;
-			}
-		</style>
+
+		<!-- memanggil font awesome -->
+		<script src="https://kit.fontawesome.com/a4b3d6e215.js" crossorigin="anonymous"></script>
+
+		<!-- memanggil bootstrap 5 -->
 	</head>
-	<body id="home">
-		<h3>Selamat Datang, Yusril</h3>
+
+	<body id="home" style="background-image: url('assets/img/21.jpg'); background-size: 100%; background-repeat : no-repeat;">
+		<p style="margin-top: 80px; margin-left: 20px;">Hai, Dimas</p>
+		<h3>AYO PARKIR DENGAN AMAN</h3>
 		<div id="box_info">
-			<p class="t"><b>Saldo Smart Pay</b></p>
-			<p class="s">1.000.000</p>
+			<p class="t"><i class="far fa-credit-card"></i>&nbsp Saldo Smart Pay</p>
+			<p class="s"><b>Rp70.000</b></p>
 			<div class="clear"></div>
 			<hr>
 			<div class="col-4">
-				<div class="box_icon"><a href="scanBarcode.html"><img src="assets/img/qrcode.png"></div>
-				<p>QR Code</p></a>
+				<div class="box_icon"><a href="scanBarcode.html"><i class="fas fa-qrcode fa-3x"></i></div>
+				<p>Kode Barcode</p></a>
 			</div>
 			<div class="col-4">
-				<div class="box_icon"><a href="auth_transaksi.html"><img src="assets/img/wallet.png"></div>
-				<p>Top Up</p></a>
+				<div class="box_icon"><a href="lokasi_parkir.html"><i class="fas fa-parking fa-3x"></i></div>
+				<p>Lokasi Parkir</p></a>
 			</div>
 			<div class="col-4">
-				<div class="box_icon"><a href="auth_riwayat.html"><img src="assets/img/money.png"></div>
-				<p>Riwayat</p></a>
+				<div class="box_icon"><a href="isi_saldo.html"><i class="far fa-credit-card fa-3x"></i></div>
+				<p>Isi Saldo</p></a>
 			</div>
 			<div class="clear"></div>
 		</div>
-
-		<a href="auth_login.html" class="btn">KELUAR</a>
 	</body>
 </html>
