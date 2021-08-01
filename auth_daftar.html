@@ -1,40 +1,165 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<title>Smart Parking</title>
-		<link rel="stylesheet" type="text/css" href="assets/css/master.css">
-		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Allura|Andika|Merriweather|Cookie|Economica|Shrikhand|Mrs+Saint+Delafield|Qwigley|Ubuntu">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	</head>
-	<body id="auth" class="daftar">
-		<h2>BUAT AKUN BARU</h2>
-		<form action="auth_login.html" method="POST">
-			<label>NAMA LENGKAP</label>
-			<input type="text" name="" placeholder="Nama Lengkap">
-			<label>NOMOR TELEPON</label>
-			<input type="num" name="" placeholder="Nomor Telepon">
-			<label>EMAIL</label>
-			<input type="email" name="" placeholder="Email">
-			<label>KATA SANDI</label>
-			<input type="password" name="" placeholder="Kata Sandi">
-			<label>KONFIRMASI KATA SANDI</label>
-			<input type="password" name="" placeholder="Konfirmasi Kata Sandi">
-			<label>NO IDENTITAS</label>
-			<input type="text" name="" placeholder="No Identitas">
-			<label>FOTO IDENTITAS</label>
-			<label for="foto1" class="input_file"><img src="assets/img/camera.png"></label>
-			<input id="foto1" type="file" name="" style="display: none;">
-			<label>FOTO STNK</label>
-			<label for="foto2" class="input_file"><img src="assets/img/camera.png"></label>
-			<input id="foto2" type="file" name="" style="display: none;">
-			<label>FOTO KENDARAAN TAMPAK DEPAN</label>
-			<label for="foto3" class="input_file"><img src="assets/img/camera.png"></label>
-			<input id="foto3" type="file" name="" style="display: none;">
-			<label>FOTO KENDARAAN TAMPAK BELAKANG</label>
-			<label for="foto4" class="input_file"><img src="assets/img/camera.png"></label>
-			<input id="foto4" type="file" name="" style="display: none;">
-			<input type="submit" name="submit" value="BUAT AKUN">
-			<p>Sudah Punya Akun ? <a class="btn" href="auth_login.html">Klik Disini ! </a></p>
-		</form>
-	</body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Allura|Andika|Merriweather|Cookie|Economica|Shrikhand|Mrs+Saint+Delafield|Qwigley|Ubuntu">
+    <link rel="stylesheet" type="text/css" href="assets/css/master.css">
+    <title>Daftar</title>
+</head>
+<body>
+
+
+          
+            <div class="container">
+              
+                <h2 style="text-align: center; color: blue;">BUAT AKUN BARU</h2>
+
+                <form>
+                   <span> <label>NAMA LENGKAP</label></span>
+                    <div class="input-group mb-3"  >
+                      <div class="input-group-text" id="basic-addon1" >
+
+                        <span><i class="bi bi-person-fill"></i></span>
+                      </div>
+                      <input type="text" class="form-control" placeholder="Nama Lengkap" aria-label="Email atau Telepon" aria-describedby="basic-addon1">
+                  
+                  </div>
+
+                  <label for="tlp" class="form-label">NOMOR TELEPON</label>
+                      <div class="input-group mb-3"  >
+                      <div class="input-group-text" id="basic-addon1">
+                        <span><i class="bi bi-telephone-fill"></i></span>
+                      </div>
+                      <input type="number" class="form-control" placeholder="Nomor Telepon" aria-label="Nomor Telepon" aria-describedby="basic-addon1">
+                   
+                  </div>
+                  <label for="email" class="form-label">ALAMAT EMAIL</label>
+                      <div class="input-group mb-3"  >
+                      <div class="input-group-text" id="basic-addon1">
+                        <span><i class="bi bi-envelope-fill"></i></span>
+                      </div>
+                      <input type="text" class="form-control" placeholder="Alamat Email" aria-label="email" aria-describedby="basic-addon1">
+                   
+                  </div>
+                       <label for="sandi" class="form-label">KATA SANDI</label>
+                      <div class="input-group mb-3"  >
+                      <div class="input-group-text" id="basic-addon1">
+                        <span><i class="bi bi-lock-fill"></i></span>
+                      </div>
+                      <input type="password" class="form-control" placeholder="Kata Sandi" aria-label="sandi" aria-describedby="basic-addon1">
+                   
+                  </div>
+                      <label for="sandi" class="form-label">KONFIRMASI KATA SANDI</label>
+                      <div class="input-group mb-3"  >
+                      <div class="input-group-text" id="basic-addon1">
+                        <span><i class="bi bi-lock-fill"></i></span>
+                      </div>
+                      <input type="password" class="form-control" placeholder="Kofirmasi Kata Sandi" aria-label="sandi" aria-describedby="basic-addon1">
+                   
+                  </div>
+                      <label for="sandi" class="form-label">NOMOR IDENTITAS</label>
+                      <div class="input-group "  >
+                      <div class="input-group-text" id="basic-addon1">
+                        <span><i class="bi bi-person"></i></span>
+                      </div>
+                      <input type="text" class="form-control" placeholder="Nomor Identitas" aria-label="Nomor Identitas" aria-describedby="basic-addon1">
+
+                   
+                  </div>
+                  <span> <label style="font-size: 11px" class="mb-3">(KTP-SIM-KARTU PELAJAR ATAU MAHASISWA)</label></span>
+                  <br>
+                      <label for="sandi" class="form-label">NOMOR PLAT</label>
+                      <div class="input-group mb-3"  >
+                      <div class="input-group-text" id="basic-addon1">
+                        <span><i class="bi bi-card-list"></i></span>
+                      </div>
+                      <input type="text" class="form-control" placeholder="Nomor Plat" aria-label="Nomor Plat" aria-describedby="basic-addon1">
+                      
+                   
+                  </div>
+                  <label for="sandi" class="form-label">NOMOR PIN</label>
+                      <div class="input-group mb-3"  >
+                      <div class="input-group-text" id="basic-addon1">
+                        <span><i class="bi bi-credit-card-2-front"></i></span>
+                      </div>
+                      <input type="text" class="form-control" placeholder="Nomor PIN" aria-label="Nomor PIN" aria-describedby="basic-addon1">
+                      
+                   
+                  </div>
+                  <label for="foto1" class="form-label">FOTO IDENTITAS</label>
+                  <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="Pilih Foto" aria-label="Pilih Foto" aria-describedby="button-addon2">
+                    <button class="btn btn-outline-secondary" type="button" id="button-addon2"><i class="bi bi-camera-fill"></i></button>
+                  </div>
+
+                  <label for="foto2" class="form-label">FOTO STNK</label>
+                  <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="Pilih Foto" aria-label="Pilih Foto" aria-describedby="button-addon2">
+                    <button class="btn btn-outline-secondary" type="button" id="button-addon2"><i class="bi bi-camera-fill"></i></button>
+                  </div>
+
+                  
+
+                  <label for="foto3" class="form-label">FOTO KENDARAAN DEPAN</label>
+                  <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="Pilih Foto" aria-label="Pilih Foto" aria-describedby="button-addon2">
+                    <button class="btn btn-outline-secondary input_file" type="button" id="button-addon2"><i class="bi bi-camera-fill"></i></button>
+                  </div>
+
+                  <label for="foto4" class="form-label">FOTO KENDARAAN BELAKANG</label>
+                  <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="Pilih Foto" aria-label="Pilih Foto" aria-describedby="button-addon2">
+                    <button class="btn btn-outline-secondary" type="button" id="button-addon2"><i class="bi bi-camera-fill"></i></button>
+                  </div>
+
+                  <button type="submit" class="btn btn-primary rounded-pill" style="width: 100%;">DAFTAR</button>
+
+                  
+                      <p style="color: blue; text-align: center;" class="text-center">Sudah punya akun? klik <a href="auth_login.html" style="color: blue">masuk</a></p>
+                      
+                  </form>
+            </div>
+         
+</body>
+<!--------------------------------------- BOOTSTRAP 5 -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/a4b3d6e215.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+<!-- ---------------css -->
+<style>
+    *{
+        padding: auto;
+        margin: auto;
+    }
+    body{
+        width: 100%;
+        height: 100vh;
+        background-size: cover;
+        display: flex;
+        align-items: center;
+        justify-content: center; 
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    .jumbotron {
+        
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        background-color: #fff;
+        background-position: center;
+        justify-content: center; 
+        border-radius: 50px;
+
+
+}
+</style>
+
+
+  </div>
 </html>

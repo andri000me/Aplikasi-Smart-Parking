@@ -3,12 +3,6 @@ hr{margin: 10px 0;}
 .clear{clear: both;}
 .col-4{width: 33.33%;float: left;}
 
-#bg-smart{
-	background-image: url('assets/img/21.jpg'); 
-	background-size: 100%; 
-	background-repeat : no-repeat;
-}
-
 a {
 	text-decoration: none;
 	color: black;
@@ -191,16 +185,16 @@ a {
 	position: absolute;
 }
 
+
 #home h3{
-	text-align: left;
-	margin-left:20px;
-	margin-bottom: 50px;
+	text-align: center;
+	margin:70px;
 }
 
 #home #box_info{
 	width: 90%;
 	margin: 10px 5%;
-	border-radius: 15px;
+	border-radius: 5px;
 	border: 1px solid grey;
 	padding: 15px;
 	background-color: white;
@@ -252,6 +246,5 @@ a {
 #home #box_info2 h2{ color: black; margin: 40px; text-align: center;}
 #home .input h3{ color: black; margin: 20px; text-align: left;}
 
-.full_btn {
-	width: 100%;
-}
+
+
