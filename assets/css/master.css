@@ -192,8 +192,9 @@ a {
 }
 
 #home h3{
+	position: relative;
 	text-align: left;
-	margin-left:20px;
+	top:20px;
 	margin-bottom: 50px;
 }
 
@@ -255,3 +256,5 @@ a {
 .full_btn {
 	width: 100%;
 }
+
+
