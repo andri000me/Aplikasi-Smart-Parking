@@ -18,15 +18,6 @@ class M_crud extends CI_Model {
 		return $query->result_array();
 	}
 
-	public function hitungjumlah($table){
-		$query = $this->db->get($table);
-		if ($query->num_rows()>0) {
-			return $query->num_rows();
-		} else {
-			return 0;
-		}
-	}
-
 	function query($query){
 		return $this->db->query($query);
 	}

@@ -37,14 +37,14 @@
 
         <h2>Pilih Metode Pembayaran Lain</h2>
 
-            <div class="col-sm-4 col-md-4 col-lg-4 kl">
-                <input type="radio" id="gopay" name="metode_pembayaran" value="Go-Pay">
-                <label for="gopay">Go-Pay</label>
-                <input type="radio" id="ovo" name="metode_pembayaran" value="Ovo-Pay">
-                <label for="ovo">Ovo-Pay</label>
-                <input type="radio" id="dana" name="metode_pembayaran" value="Dana">
-                <label for="dana">Dana</label>
-            </div>
+        <div class="col-sm-4 col-md-4 col-lg-4 kl">
+            <input type="radio" id="gopay" name="metode_pembayaran" value="Go-Pay">
+            <label for="gopay">Go-Pay</label>
+            <input type="radio" id="ovo" name="metode_pembayaran" value="Ovo-Pay">
+            <label for="ovo">Ovo-Pay</label>
+            <input type="radio" id="dana" name="metode_pembayaran" value="Dana">
+            <label for="dana">Dana</label>
+        </div>
     </div>
 
 

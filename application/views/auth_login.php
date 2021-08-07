@@ -1,51 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Allura|Andika|Merriweather|Cookie|Economica|Shrikhand|Mrs+Saint+Delafield|Qwigley|Ubuntu">
-    <title>Login</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Allura|Andika|Merriweather|Cookie|Economica|Shrikhand|Mrs+Saint+Delafield|Qwigley|Ubuntu">
+  <title>Login</title>
 </head>
 
 <body>      
   <div class="container" >          
-  <form>
-    <div class="text-center">
-      <img src="<?php echo base_url().'assets/img/logo.png'?>" class="img-thumbnail" alt="..." style="width: 300px; border: 0ch; margin-top: 0px;">
+    <form action="<?php echo base_url().'login/login_process' ?>" method="post">
+      <div class="text-center">
+        <img src="<?php echo base_url().'assets/img/logo.png'?>" class="img-thumbnail" alt="..." style="width: 300px; border: 0ch; margin-top: 0px;">
+        
+      </div>
       
-    </div>
-  
-    <div class="input-group mb-3"  >
+      <div class="input-group mb-3"  >
         <div class="input-group-text" id="basic-addon1">
           <span><i class="bi bi-telephone-fill"></i></span>
         </div>
-        <input type="text" class="form-control" placeholder=" Nomor Telepon" aria-label="Nomor Telepon" aria-describedby="basic-addon1">
-     
-    </div>
-    <div class="input-group mb-3">
+        <input type="text" class="form-control" placeholder=" Nomor Telepon" name="no_telp" aria-label="Nomor Telepon" aria-describedby="basic-addon1">
+        
+      </div>
+      <div class="input-group mb-3">
         <div class="input-group-text" id="basic-addon1">
           <span><i class="bi bi-lock-fill"></i></span>
         </div>
-        <input type="text" class="form-control" placeholder="Password" aria-label="Password" aria-describedby="basic-addon1">
-     
-    </div>
-    
-    <div class="form-group form-check">
-      <input type="checkbox" class="form-check-input" id="exampleCheck1">
-      <label class="form-check-label" for="exampleCheck1" style="margin-bottom: 10px;">Check me out</label>
-    </div>
-    <button type="submit" class="btn btn-primary rounded-pill" style="width: 100%;"><a href="<?php echo base_url().'Welcome/home'?>" style="text-decoration: none; color: white;'">Masuk</a></button>
+        <input type="text" class="form-control" placeholder="Password" name="password" aria-label="Password" aria-describedby="basic-addon1">
+        
+      </div>
+      
+      <div class="form-group form-check">
+        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+        <label class="form-check-label" for="exampleCheck1" style="margin-bottom: 10px;">Check me out</label>
+      </div>
+      <button type="submit" class="btn btn-primary rounded-pill" style="width: 100%;"><a href="<?php echo base_url().'Welcome/home'?>" style="text-decoration: none; color: white;'">Masuk</a></button>
 
-   <div class="lupa mb-5" style="text-align: center;">
-     <a href="<?php echo base_url().'Welcome/lupaSandi'?>"  style="color: blue;"> Lupa Kata Sandi?</a>
-   </div>
-   <div class="akun " style="text-align: center; margin-bottom: -10px;" >
-    <p style="color: blue">Belum punya akun? klik <a href="<?php echo base_url().'Welcome/daftar'?>" style="color: blue;"> buat akun baru</a></p>
-   </div>
+      <div class="lupa mb-5" style="text-align: center;">
+       <a href="<?php echo base_url().'Welcome/lupaSandi'?>"  style="color: blue;"> Lupa Kata Sandi?</a>
+     </div>
+     <div class="akun " style="text-align: center; margin-bottom: -10px;" >
+      <p style="color: blue">Belum punya akun? klik <a href="<?php echo base_url().'Welcome/daftar'?>" style="color: blue;"> buat akun baru</a></p>
+    </div>
   </form>
 </div>
-    
+
 </body>
 
 <!--------------------------------------- BOOTSTRAP 5 -->

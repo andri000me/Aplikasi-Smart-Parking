@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,100 +10,100 @@
     <script src="https://kit.fontawesome.com/a4b3d6e215.js" crossorigin="anonymous"></script>
 
     <!-- memanggil bootstrap 5 -->
-    
     <title>Document</title>
-            <style type="text/css">
-                .nav-buttom {
-                    background: #757770;
-                    width: 100%;
-                    height: 60px;
-                    position: fixed;
-                    box-sizing: initial;
-                    bottom: 0;
-                    transition: width 0.5s;
-                }
+    <style type="text/css">
+        .nav-buttom {
+            background: #757770;
+            width: 100%;
+            height: 60px;
+            position: fixed;
+            box-sizing: initial;
+            margin-left: -12px;
+            bottom: 0;
+            transition: width 0.5s;
+        }
 
-                .nav-buttom .nav-icon p b:nth-child(1) {
-                    position: absolute;
-                    left: -24px;
-                    height: 30px;
-                    width: 27px;
-                    top: 0px;
-                    display: none;
-                    background: #fff;
-                }
+        .nav-buttom .nav-icon p b:nth-child(1) {
+            position: absolute;
+            left: -24px;
+            height: 30px;
+            width: 27px;
+            top: 0px;
+            display: none;
+            background: #fff;
+        }
 
-                .nav-buttom .nav-icon p b:nth-child(1)::before{
-                    content: '';
-                    position: absolute;
-                    left: -3px;
-                    bottom: -3px;
-                    width: 115%;
-                    height: 110%;
-                    border: none;
-                    border-top-right-radius: 40px;
-                    background: #757770;
-                } 
+        .nav-buttom .nav-icon p b:nth-child(1)::before{
+            content: '';
+            position: absolute;
+            left: -3px;
+            bottom: -3px;
+            width: 115%;
+            height: 110%;
+            border: none;
+            border-top-right-radius: 40px;
+            background: #757770;
+        } 
 
-                .nav-buttom .nav-icon p b:nth-child(2) {
-                    position: absolute;
-                    right: -24px;
-                    height: 30px;
-                    width: 27px;
-                    top: 0px;
-                    background-color: #fff;
-                    display: none;
-                }
+        .nav-buttom .nav-icon p b:nth-child(2) {
+            position: absolute;
+            right: -24px;
+            height: 30px;
+            width: 27px;
+            top: 0px;
+            background-color: #fff;
+            display: none;
+        }
 
-                .nav-buttom .nav-icon p b:nth-child(2)::before{
-                    content: '';
-                    position: absolute;
-                    right: -3px;
-                    bottom: -4px;
-                    width: 115%;
-                    height: 110%;
-                    border-top-left-radius: 40px;
-                    background: #757770;
-                } 
+        .nav-buttom .nav-icon p b:nth-child(2)::before{
+            content: '';
+            position: absolute;
+            right: -3px;
+            bottom: -4px;
+            width: 115%;
+            height: 110%;
+            border-top-left-radius: 40px;
+            background: #757770;
+        } 
 
-                .nav-buttom .nav-icon p.active b:nth-child(1),
-                .nav-buttom .nav-icon p.active b:nth-child(2) {
-                    display: block;
-                }
+        .nav-buttom .nav-icon p.active b:nth-child(1),
+        .nav-buttom .nav-icon p.active b:nth-child(2) {
+            display: block;
+        }
 
-                .nav-buttom a{
-                    color: #fff;
-                    font-size: 16px;
-                }
+        .nav-buttom a{
+            color: #fff;
+            font-size: 16px;
+        }
 
-                .nav-buttom .nav-icon{
-                    margin-top: 8px;
-                }
+        .nav-buttom .nav-icon{
+            margin-top: 8px;
+        }
 
-                .nav-buttom .nav-icon p {
-                    position: relative;
-                    list-style: none;
-                    padding-top: 8px;
-                    width: 80px;
-                    height: 50px;
-                    top: -7px;
-                    left: 20%;
-                    border-bottom-right-radius: 40px;
-                    border-bottom-left-radius: 40px;
-                }
+        .nav-buttom .nav-icon p {
+            position: relative;
+            list-style: none;
+            padding-top: 8px;
+            width: 80px;
+            height: 50px;
+            top: -7px;
+            left: 20%;
+            border-bottom-right-radius: 40px;
+            border-bottom-left-radius: 40px;
+        }
 
-                .nav-buttom .nav-icon p.active {
-                    background: #fff;
-                    margin-top: -2px;
-                }
+        .nav-buttom .nav-icon p.active {
+            background: #fff;
+            margin-top: -2px;
+        }
 
-                .nav-buttom .nav-icon p.active a{
-                    color: black;
-                    font-size: 22px;
-                    position: relative;
-                    bottom: 20px;
-                }
-        </style>
+        .nav-buttom .nav-icon p.active a{
+            color: black;
+            font-size: 22px;
+            position: relative;
+            bottom: 20px;
+        }
+    </style>
 </head>
 <body style="background-image: url(<?php echo base_url().'assets/img/21.jpg'?>); background-size: 100%; background-repeat : no-repeat;">
     <div class="container">
@@ -149,7 +148,7 @@
                     <b></b>
                     <b></b>
                     <a href="<?php echo base_url().'Welcome/home'?>">
-                    <i class="fas fa-home fa-2x"></i>
+                        <i class="fas fa-home fa-2x"></i>
                     </a>
                 </p>
             </div>
@@ -171,18 +170,18 @@
     </div>
     <script type="text/javascript">
         let list = document.querySelectorAll('.list');
-            for (let i = 0; i < list.length; i++) {
-                list[i].onclick = function(){
-                    let j = 0;
-                    while(j < list.length){
-                        list[j++].className = 'list';
-                    }
-                    list[i].className = 'list active';
+        for (let i = 0; i < list.length; i++) {
+            list[i].onclick = function(){
+                let j = 0;
+                while(j < list.length){
+                    list[j++].className = 'list';
                 }
+                list[i].className = 'list active';
             }
+        }
     </script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    </div>
+</div>
 </body>
 </html>
