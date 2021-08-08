@@ -11,11 +11,11 @@
 <body>
   <div class="container">
     
-    <h2 style="text-align: center; color: blue;">BUAT AKUN BARU</h2>
+    <h2 class="pt-2" style="text-align: center; color: blue;">BUAT AKUN BARU</h2>
 
     <form action="<?php echo base_url().'register/register'?>" method="post">
-     <span> <label>NAMA LENGKAP</label></span>
-     <div class="input-group mb-3"  >
+      <span> <label>NAMA LENGKAP</label></span>
+      <div class="input-group mb-3"  >
       <div class="input-group-text" id="basic-addon1" >
 
         <span><i class="bi bi-person-fill"></i></span>
@@ -88,25 +88,21 @@
     <label for="foto1" class="form-label">FOTO IDENTITAS</label>
     <div class="input-group mb-3">
       <input type="file" class="form-control" placeholder="Pilih Foto" aria-label="Pilih Foto" aria-describedby="button-addon2" name="foto_id">
-      <button class="btn btn-outline-secondary" name="foto_id" type="button" id="button-addon2"><i class="bi bi-camera-fill"></i></button>
     </div>
 
     <label for="foto2" class="form-label">FOTO STNK</label>
     <div class="input-group mb-3">
       <input type="file" class="form-control" placeholder="Pilih Foto" aria-label="Pilih Foto" aria-describedby="button-addon2" name="foto_stnk">
-      <button class="btn btn-outline-secondary" name="foto_stnk" type="button" id="button-addon2"><i class="bi bi-camera-fill"></i></button>
     </div>
 
     <label for="foto3" class="form-label">FOTO KENDARAAN DEPAN</label>
     <div class="input-group mb-3">
       <input type="file" class="form-control" name="foto_kd" placeholder="Pilih Foto" aria-label="Pilih Foto" aria-describedby="button-addon2" name="foto_kd">
-      <button class="btn btn-outline-secondary input_file" type="button" id="button-addon2"><i class="bi bi-camera-fill"></i></button>
     </div>
 
     <label for="foto4" class="form-label">FOTO KENDARAAN BELAKANG</label>
     <div class="input-group mb-3">
       <input type="file" class="form-control" placeholder="Pilih Foto" aria-label="Pilih Foto" aria-describedby="button-addon2" name="foto_kb">
-      <button class="btn btn-outline-secondary" name="foto_kb" type="button" id="button-addon2"><i class="bi bi-camera-fill"></i></button>
     </div>
 
     <button type="submit" class="btn btn-primary rounded-pill"  name="btn-simpan" style="width: 100%;">DAFTAR</button>

@@ -8,7 +8,6 @@
 <!-- memanggil font awesome -->
 <script src="https://kit.fontawesome.com/a4b3d6e215.js" crossorigin="anonymous"></script>
 
-<!-- memanggil bootstrap 5 -->
 <style type="text/css">
 	.nav-buttom {
 		background: #757770;
@@ -106,6 +105,7 @@
 <body id="home" style="background-image: url(<?php echo base_url().'assets/img/21.jpg'?>); background-size: 100%; background-repeat : no-repeat;">
 	<p style="margin-top: 80px; margin-left: 26px; font-size: 18px;">Hai, <?php echo $this->session->userdata('nama_lengkap')?></p>
 	<h3 style="position: relative; top:3px; margin-left: 25px;">AYO PARKIR DENGAN AMAN</h3>
+	<br><br>
 	<div id="box_info" >
 		<p class="t"><i class="far fa-credit-card"></i>&nbsp Saldo Smart Pay</p>
 		<p class="s"><b>Rp <?php echo $this->session->userdata('saldo')?></b></p>

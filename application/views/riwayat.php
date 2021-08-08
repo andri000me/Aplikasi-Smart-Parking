@@ -9,7 +9,6 @@
     <!-- memanggil font awesome -->
     <script src="https://kit.fontawesome.com/a4b3d6e215.js" crossorigin="anonymous"></script>
 
-    <!-- memanggil bootstrap 5 -->
     <title>Document</title>
     <style type="text/css">
         .nav-buttom {
@@ -111,8 +110,11 @@
             <div class="col-1">
                 <i class="fas fa-history fa-2x"></i>
             </div>
-            <div class="col">
+            <div class="col-9">
                 <h2 class="fw-bold fs-1 mx-1">Riwayat Parkir</h2>
+            </div>
+            <div class="col">
+                <i class="fas fa-sign-out-alt fa-2x text-danger"></i>
             </div>
         </div>
 
@@ -179,6 +181,7 @@
                 list[i].className = 'list active';
             }
         }
+
     </script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>

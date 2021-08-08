@@ -37,14 +37,14 @@
       </div>
       <button type="submit" class="btn btn-primary rounded-pill" style="width: 100%;"><a href="<?php echo base_url().'Welcome/home'?>" style="text-decoration: none; color: white;'">Masuk</a></button>
 
-      <div class="lupa mb-5" style="text-align: center;">
-       <a href="<?php echo base_url().'Welcome/lupaSandi'?>"  style="color: blue;"> Lupa Kata Sandi?</a>
-     </div>
-     <div class="akun " style="text-align: center; margin-bottom: -10px;" >
-      <p style="color: blue">Belum punya akun? klik <a href="<?php echo base_url().'Welcome/daftar'?>" style="color: blue;"> buat akun baru</a></p>
-    </div>
-  </form>
-</div>
+      <div class="lupa mb-5 text-center">
+        <a href="<?php echo base_url().'Welcome/lupaSandi'?>"  style="color: blue;"> Lupa Kata Sandi?</a>
+      </div>
+      <div class="akun" style="text-align: center; margin-bottom: -10px;" >
+        <p style="color: blue">Belum punya akun? klik <a href="<?php echo base_url().'Welcome/daftar'?>" style="color: blue;"> buat akun baru</a></p>
+      </div>
+    </form>
+  </div>
 
 </body>
 
@@ -73,4 +73,4 @@
 
 </style>
 
-</html
+</html>
