@@ -35,7 +35,10 @@ class register extends CI_Controller {
 				'pin' => $this->input->post('no_pin')
 				);
 			$this->m_crud->tambahData('akun',$data);
-			$this->session->set_flashdata('message','</i> Selamat!</h4> akun Berhasil dibuat</div>');
+			$this->session->set_flashdata('message','<div class="alert alert-primary alert-dismissible" role="alert" id="liveAlert">
+			<strong>Selamat!</strong> Akun berhasil dibuat
+			<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+		    </div>');
 			redirect(base_url().'Welcome/login');
 		} else {
 			$this->load->view('auth_daftar');
