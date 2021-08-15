@@ -38,7 +38,7 @@ class register extends CI_Controller {
 			$this->session->set_flashdata('message','<div class="alert alert-primary alert-dismissible" role="alert" id="liveAlert">
 			<strong>Selamat!</strong> Akun berhasil dibuat
 			<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-		    </div>');
+		  </div>');
 			redirect(base_url().'Welcome/login');
 		} else {
 			$this->load->view('auth_daftar');
