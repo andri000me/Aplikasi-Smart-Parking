@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 24, 2021 at 05:29 AM
+-- Generation Time: Aug 24, 2021 at 01:48 PM
 -- Server version: 10.4.19-MariaDB
 -- PHP Version: 8.0.6
 
@@ -49,7 +49,7 @@ CREATE TABLE `akun` (
 
 INSERT INTO `akun` (`nama_lengkap`, `no_telp`, `email`, `kata_sandi`, `nomor_identitas`, `no_plat`, `foto_identitas`, `foto_stnk`, `foto_kendaraan_depan`, `foto_kendaraan_belakang`, `saldo`, `pin`, `qr_code`) VALUES
 ('sinichi', '085213575999', 'bhbhbh@gmail.com', '123456', '1112223334445', 'P-12421-W', 'kjij11.PNG', 'hapus.PNG', 'edit.PNG', 'gf43.PNG', 0, '123567', '1112223334445.png'),
-('Muhammad Yusril Amin', '085213575815', 'sinischi@gmail.com', '123456', '123456789123', 'P-12421-W', 'kjkhkhk.PNG', 'gf42.PNG', 'sdfs.PNG', 'gfg11.PNG', 39000, '123345', '123456789123.png');
+('Muhammad Yusril Amin', '085213575815', 'sinichi@gmail.com', '123456', '123456789123', 'P-12421-W', 'kjkhkhk.PNG', 'gf42.PNG', 'sdfs.PNG', 'gfg11.PNG', 39000, '123345', '123456789123.png');
 
 -- --------------------------------------------------------
 
@@ -70,7 +70,10 @@ CREATE TABLE `detail_lokasi` (
 --
 
 INSERT INTO `detail_lokasi` (`id_detail`, `id_parkir`, `lokasi_detail_parkit`, `status`, `harga_tiket`) VALUES
-(1, 1, 'a-36', 1, 5000);
+(1, 1, 'a-36', 0, 5000),
+(2, 1, 'a-37', 0, 5000),
+(3, 2, 'a-34', 0, 5000),
+(4, 1, 'a-39', 1, 5000);
 
 -- --------------------------------------------------------
 
@@ -80,15 +83,25 @@ INSERT INTO `detail_lokasi` (`id_detail`, `id_parkir`, `lokasi_detail_parkit`, `
 
 CREATE TABLE `parkir` (
   `id_parkir` int(11) NOT NULL,
-  `lokasi_parkir` text NOT NULL
+  `lokasi_parkir` varchar(50) NOT NULL,
+  `alamat` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `parkir`
 --
 
-INSERT INTO `parkir` (`id_parkir`, `lokasi_parkir`) VALUES
-(1, 'lippo');
+INSERT INTO `parkir` (`id_parkir`, `lokasi_parkir`, `alamat`) VALUES
+(1, 'Lippo Plaza', 'Jl. Gajah Mada No.106, Kb. Kidul, Jember Kidul, Kec. Kaliwates, Kabupaten Jember, Jawa Timur'),
+(2, 'Roxy Square', 'Jl. Hayam Wuruk No.50-58, Gerdu, Sempusari, Kaliwates, Kabupaten Jember, Jawa Timur'),
+(3, 'Matahari Johar Plaza', 'Johar Plaza, Jl. Diponegoro No.3, Tembaan, Kepatihan, Kec. Kaliwates, Kabupaten Jember, Jawa Timur'),
+(4, 'Super Galaxy Tempurejo', 'Galaksi, Tempurejo, Kabupaten Jember, Jawa Timur'),
+(5, 'Golden Market', 'Jl. Trunojoyo No.42, Sawahan Cantian, Kepatihan, Kec. Kaliwates, Kabupaten Jember, Jawa Timur'),
+(6, 'Dira Shopping Centre', 'Jl. Puger, Krajan Lor, Balung Kulon, Balung, Kabupaten Jember, Jawa Timur'),
+(7, 'Transmart Jember', 'Jl. Hayam Wuruk No.71, Gerdu, Sempusari, Kec. Kaliwates, Kabupaten Jember, Jawa Timur'),
+(8, 'Larisso Supermarket', 'Jl. Watu Ulo No.21, Krajan, Ambulu, Kabupaten Jember, Jawa Timur'),
+(9, ' Waterpark Dira Kencong', 'Jl. Krakatau No.93, Pd. Waluh, Kencong, Kabupaten Jember, Jawa Timur'),
+(10, 'Kota Cinema Mall', 'Jl. Gajah Mada No.176, Kb. Kidul, Jember Kidul, Kec. Kaliwates, Kabupaten Jember, Jawa Timur');
 
 -- --------------------------------------------------------
 

@@ -10,7 +10,7 @@
         <li class="list-group-item active mt-5" aria-current="true">Transaksi Top-up Terakhir</li>  
         <?php 
         foreach ($saldo1 as $value ) {
-            ?>
+        ?>
             <li class="list-group-item">
                 <span class="fw-bold fs-7">+ <?php echo $value->nominal?></span><br>
                 <span class="fs-8"><?php echo $value->tanggall?></span>
