@@ -20,67 +20,38 @@ class Welcome extends CI_Controller {
 	 */
 	public function index()
 	{
-		$this->load->view('splash');
-	}
-
-	public function home()
-	{
-		$this->load->view('home');
-	}
-
-	public function barcode()
-	{
-		$this->load->view('barcode');
-	}
-
-	public function metode_pembayaran()
-	{
-		$this->load->view('metode_pembayaran');
-	}
-
-	public function lokasi()
-	{
-		$this->load->view('lokasi_parkir');
-	}
-
-	public function pin()
-	{
-		$this->load->view('pin');
-	}
-
-	public function isi_saldo()
-	{
-		$this->load->view('isi_saldo');
-	}
-
-	public function riwayat()
-	{
-		$this->load->view('riwayat');
-	}
-
-	public function voucher()
-	{
-		$this->load->view('voucher');
+		$this->load->view('splash/splash');
 	}
 
 	public function main()
 	{
-		$this->load->view('main');
+		$this->load->view('templates/header');
+		$this->load->view('main/main');
+		$this->load->view('templates/footer');
 	}
 
-	public function daftar()
+	public function voucher()
 	{
-		$this->load->view('auth_daftar');
+		$this->load->view('templates/home_header');
+		$this->load->view('voucher/voucher');
+		$this->load->view('templates/home_footer');
 	}
-
-	public function login()
+	public function pin()
 	{
-		$this->load->view('auth_login');
+		$this->load->view('templates/home_header');
+		$this->load->view('tiket/pin');
 	}
 
-	public function lupaSandi()
+	public function metode()
 	{
-		$this->load->view('auth_forgot');
+		$this->load->view('templates/home_header');
+		$this->load->view('tiket/metode_pembayaran');
 	}
 
+
+	public function lupa_sandi()
+	{
+		$this->load->view('templates/home_header');
+		$this->load->view('lupa_sandi/lupa_sandi');
+	}
 }
