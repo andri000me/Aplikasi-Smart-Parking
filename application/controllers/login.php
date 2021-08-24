@@ -29,10 +29,11 @@ class login extends CI_Controller {
 			$no_telp = $this->input->post('no_telp');
 			$password = $this->input->post('password');
 
-			$chek = $this->db->get_where('akun', array( 'no_telp','email' => $no_telp, 'kata_sandi' => $password ));
+			$chek = $this->db->get_where('akun', array( 'email' => $no_telp, 'kata_sandi' => $password ));
+			$chek1 = $this->db->get_where('akun', array( 'no_telp' => $no_telp, 'kata_sandi' => $password ));
 			$data = $chek->row_array();
 
-			if ($chek->num_rows() > 0) {
+			if ($chek->num_rows() > 0 OR $chek1->num_rows() > 0) {
 				$data_session = $this->db->query("SELECT * FROM akun WHERE email ='$no_telp' OR no_telp='$no_telp'")->row_array();
 				$this->session->set_userdata(array('no_telp' => $no_telp,  'nama_lengkap' => $data_session['nama_lengkap'], 'saldo' => $data_session['saldo'], 'nomor_identitas' => $data_session['nomor_identitas'], 'qr_code' => $data_session['qr_code'], 'status_login_admin' => 'sudah_login'));
 				redirect('home/home');
