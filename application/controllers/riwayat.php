@@ -10,8 +10,8 @@ class riwayat extends CI_Controller {
 
 	public function riwayat()
 	{
-		$where = array('id_user' => $this->session->userdata('nomor_identitas'));
-		$data['riwayat'] = $this->Model->getDataw('transaksi',$where)->result();
+		$where = $this->session->userdata('nomor_identitas');
+		$data['riwayat'] = $this->db->query("SELECT T.id_transaksi, T.id_user, P.lokasi_parkir, T.tanggal FROM transaksi T INNER JOIN detail_lokasi DL ON T.tempat_parkir = DL.id_detail INNER JOIN parkir P ON DL.id_parkir = P.id_parkir WHERE id_user = '$where' ORDER BY T.tanggal ASC")->result();
 
 		$this->load->view('templates/home_header');
 		$this->load->view('riwayat/riwayat',$data);
