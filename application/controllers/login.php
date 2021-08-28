@@ -35,7 +35,7 @@ class login extends CI_Controller {
 
 			if ($chek->num_rows() > 0 OR $chek1->num_rows() > 0) {
 				$data_session = $this->db->query("SELECT * FROM akun WHERE email ='$no_telp' OR no_telp='$no_telp'")->row_array();
-				$this->session->set_userdata(array('no_telp' => $no_telp,  'nama_lengkap' => $data_session['nama_lengkap'], 'saldo' => $data_session['saldo'], 'nomor_identitas' => $data_session['nomor_identitas'], 'qr_code' => $data_session['qr_code'], 'status_login_admin' => 'sudah_login'));
+				$this->session->set_userdata(array('no_telp' => $no_telp,  'nama_lengkap' => $data_session['nama_lengkap'], 'no_plat' => $data_session['no_plat'], 'nomor_identitas' => $data_session['nomor_identitas'], 'qr_code' => $data_session['qr_code'], 'pin' => $data_session['pin'], 'status_login_admin' => 'sudah_login'));
 				redirect('home/home');
 			} else {
 				$this->session->set_flashdata('Pesan','

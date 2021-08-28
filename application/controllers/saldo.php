@@ -8,8 +8,6 @@ class saldo extends CI_Controller {
 		$this->load->model('Model');
 	}
 
-
-
 	public function saldo()
 	{
 		$where = $this->session->userdata('nomor_identitas');

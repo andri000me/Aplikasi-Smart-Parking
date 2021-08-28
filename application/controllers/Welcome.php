@@ -36,11 +36,6 @@ class Welcome extends CI_Controller {
 		$this->load->view('voucher/voucher');
 		$this->load->view('templates/home_footer');
 	}
-	public function pin()
-	{
-		$this->load->view('templates/home_header');
-		$this->load->view('tiket/pin');
-	}
 
 	public function metode()
 	{

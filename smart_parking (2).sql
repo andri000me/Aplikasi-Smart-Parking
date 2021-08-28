@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 24, 2021 at 01:48 PM
+-- Generation Time: Aug 28, 2021 at 04:06 PM
 -- Server version: 10.4.19-MariaDB
 -- PHP Version: 8.0.6
 
@@ -49,7 +49,7 @@ CREATE TABLE `akun` (
 
 INSERT INTO `akun` (`nama_lengkap`, `no_telp`, `email`, `kata_sandi`, `nomor_identitas`, `no_plat`, `foto_identitas`, `foto_stnk`, `foto_kendaraan_depan`, `foto_kendaraan_belakang`, `saldo`, `pin`, `qr_code`) VALUES
 ('sinichi', '085213575999', 'bhbhbh@gmail.com', '123456', '1112223334445', 'P-12421-W', 'kjij11.PNG', 'hapus.PNG', 'edit.PNG', 'gf43.PNG', 0, '123567', '1112223334445.png'),
-('Muhammad Yusril Amin', '085213575815', 'sinichi@gmail.com', '123456', '123456789123', 'P-12421-W', 'kjkhkhk.PNG', 'gf42.PNG', 'sdfs.PNG', 'gfg11.PNG', 39000, '123345', '123456789123.png');
+('Muhammad Yusril Amin', '085213575815', 'sinichi@gmail.com', '123456', '123456789123', 'P-12421-W', 'kjkhkhk.PNG', 'gf42.PNG', 'sdfs.PNG', 'gfg11.PNG', 25000, '123345', '123456789123.png');
 
 -- --------------------------------------------------------
 
@@ -72,7 +72,7 @@ CREATE TABLE `detail_lokasi` (
 INSERT INTO `detail_lokasi` (`id_detail`, `id_parkir`, `lokasi_detail_parkit`, `status`, `harga_tiket`) VALUES
 (1, 1, 'a-36', 0, 5000),
 (2, 1, 'a-37', 0, 5000),
-(3, 2, 'a-34', 0, 5000),
+(3, 2, 'a-34', 1, 5000),
 (4, 1, 'a-39', 1, 5000);
 
 -- --------------------------------------------------------
@@ -123,7 +123,8 @@ CREATE TABLE `saldo` (
 INSERT INTO `saldo` (`id_saldo`, `id_user`, `nominal`, `tanggall`) VALUES
 (1, '123456789123', 30000, '2021-08-23 14:37:59'),
 (2, '123456789123', 20000, '2021-08-23 14:43:59'),
-(3, '123456789123', 4000, '2021-08-24 00:51:10');
+(3, '123456789123', 4000, '2021-08-24 00:51:10'),
+(4, '123456789123', 41001, '2021-08-28 02:06:44');
 
 --
 -- Triggers `saldo`
@@ -148,11 +149,12 @@ DELIMITER ;
 --
 
 CREATE TABLE `transaksi` (
-  `id_transaksi` int(11) NOT NULL,
+  `id_transaksi` varchar(15) NOT NULL,
   `lokasi_parkir` varchar(200) NOT NULL,
   `harga_tiket` int(11) NOT NULL,
-  `tanggal` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  `tanggal` date NOT NULL,
   `status` int(11) NOT NULL,
+  `status_keluar_masuk` int(11) NOT NULL,
   `tempat_parkir` int(11) NOT NULL,
   `id_user` varchar(20) NOT NULL,
   `jam_masuk` time NOT NULL,
@@ -163,10 +165,10 @@ CREATE TABLE `transaksi` (
 -- Dumping data for table `transaksi`
 --
 
-INSERT INTO `transaksi` (`id_transaksi`, `lokasi_parkir`, `harga_tiket`, `tanggal`, `status`, `tempat_parkir`, `id_user`, `jam_masuk`, `jam_keluar`) VALUES
-(1, 'lippo', 5000, '2021-08-22 17:02:08', 1, 1, '123456789123', '16:17:28', '20:17:28'),
-(2, 'Lippo', 5000, '2021-08-22 20:18:07', 1, 1, '123456789123', '12:20:28', '17:17:28'),
-(3, 'lippo', 5000, '2021-08-23 01:03:15', 1, 1, '123456789123', '21:26:22', '21:28:22');
+INSERT INTO `transaksi` (`id_transaksi`, `lokasi_parkir`, `harga_tiket`, `tanggal`, `status`, `status_keluar_masuk`, `tempat_parkir`, `id_user`, `jam_masuk`, `jam_keluar`) VALUES
+('1188888240', 'Lippo Plaza', 5000, '2021-08-28', 1, 1, 2, '123456789123', '19:48:27', '20:39:47'),
+('1843318318', 'Lippo Plaza', 5000, '2021-08-28', 1, 1, 2, '123456789123', '01:12:07', '20:31:06'),
+('538544643', 'Lippo Plaza', 5000, '2021-08-28', 1, 0, 2, '123456789123', '01:18:28', '00:00:00');
 
 --
 -- Triggers `transaksi`
@@ -222,13 +224,7 @@ ALTER TABLE `transaksi`
 -- AUTO_INCREMENT for table `saldo`
 --
 ALTER TABLE `saldo`
-  MODIFY `id_saldo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
-
---
--- AUTO_INCREMENT for table `transaksi`
---
-ALTER TABLE `transaksi`
-  MODIFY `id_transaksi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_saldo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- Constraints for dumped tables

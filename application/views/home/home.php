@@ -23,7 +23,7 @@
 		<div class="clear"></div>
 		<hr>
 		<div class="col-4">
-			<div class="box_icon"><a href="<?php echo base_url().'tiket/tiket'?>"><i class="fas fa-qrcode fa-3x"></i></div>
+			<div class="box_icon"><a href="<?php echo base_url().'tiket/scan'?>"><i class="fas fa-qrcode fa-3x"></i></div>
 			<p>Kode Barcode</p></a>
 		</div>
 		<div class="col-4">

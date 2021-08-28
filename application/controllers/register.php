@@ -73,25 +73,25 @@ class register extends CI_Controller {
 			$foto_kendaraan_belakang = $dataInfo[3]['file_name'];
 			$pin = $this->input->post('no_pin'); 
 			
-			$this->load->library('ciqrcode'); //pemanggilan library QR CODE
+			$this->load->library('ciqrcode'); 
  
-	        $config['cacheable']    = true; //boolean, the default is true
-	        $config['cachedir']     = './assets/'; //string, the default is application/cache/
-	        $config['errorlog']     = './assets/'; //string, the default is application/logs/
-	        $config['imagedir']     = './assets/gambar/'; //direktori penyimpanan qr code
-	        $config['quality']      = true; //boolean, the default is true
-	        $config['size']         = '1024'; //interger, the default is 1024
-	        $config['black']        = array(224,255,255); // array, default is array(255,255,255)
-	        $config['white']        = array(70,130,180); // array, default is array(0,0,0)
+	        $config['cacheable']    = true; 
+	        $config['cachedir']     = './assets/'; 
+	        $config['errorlog']     = './assets/'; 
+	        $config['imagedir']     = './assets/gambar/'; 
+	        $config['quality']      = true; 
+	        $config['size']         = '1024'; 
+	        $config['black']        = array(224,255,255);
+	        $config['white']        = array(70,130,180); 
 	        $this->ciqrcode->initialize($config);
 	 
-	        $image_name=$nomor_identitas.'.png'; //buat name dari qr code sesuai dengan nomor_identitas
+	        $image_name=$nomor_identitas.'.png'; 
 	 
-	        $params['data'] = $nomor_identitas; //data yang akan di jadikan QR CODE
-	        $params['level'] = 'H'; //H=High
+	        $params['data'] = $nomor_identitas; 
+	        $params['level'] = 'H'; 
 	        $params['size'] = 10;
-	        $params['savename'] = FCPATH.$config['imagedir'].$image_name; //simpan image QR CODE ke folder assets/images/
-	        $this->ciqrcode->generate($params); // fungsi untuk generate QR CODE
+	        $params['savename'] = FCPATH.$config['imagedir'].$image_name; 
+	        $this->ciqrcode->generate($params); 
 
 			$data = array (
 				'nama_lengkap' => $nama_lengkap ,
