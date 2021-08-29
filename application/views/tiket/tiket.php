@@ -51,9 +51,11 @@
 				
 				<div class="col-6">
 					<h6>Keluar</h6>
-					<?php if ($value->status_keluar_masuk == 0) { 
+					<?php if($value->status == 0 && $value->status_keluar_masuk == 0){
+							echo "<h4 class = 'bayar'>Silahkan Scan</h4>";
+						}else if ($value->status == 1 && $value->status_keluar_masuk == 0) { 
 							echo "<a href=". base_url().'tiket/scan_keluar'."><h4>Silahkan Scan</h4></a>";
-						} else if ($value->status_keluar_masuk == 1) {
+						} else if ($value->status == 1 && $value->status_keluar_masuk == 1) {
 							echo "<h4>".$value->jam_keluar."</h4>";
 						}
 					 ?>
@@ -94,6 +96,19 @@
 			<?php } } ?>
 		</div>
 	</form>
+
+	<script type="text/javascript">
+		var bayar = document.querySelector('.bayar');
+		bayar.addEventListener("click", onClick);
+
+		function onClick() {
+			swal.fire({
+				html: "<h4><b>Harus Membayar Tiket Terlebih Dahulu !!!</b></h4>",
+				icon: "warning",
+				confirmButtonColor: "#4e73df",
+			});
+		}
+	</script>
 </body>
 </html>
 

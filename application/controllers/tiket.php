@@ -120,7 +120,7 @@ class tiket extends CI_Controller {
 			'detail_lokasi' => 'transaksi.tempat_parkir=detail_lokasi.id_detail'
 		);
 		$data['tiket'] = $this->Model->GetDataJoin('transaksi',$join,'*',$where);
-		$this->load->view('templates/home_header');
+		$this->load->library('dompdf/autoload.inc'); 
 		$this->load->view('tiket/report',$data);
 	}
 }
