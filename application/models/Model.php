@@ -8,12 +8,13 @@ class Model extends CI_Model {
 		return $query;
 	}
 
-	public function getDataJoin($table,$join,$kolom) {
+	public function getDataJoin($table,$join,$kolom,$where) {
 		$this->db->select($kolom);
 		$this->db->from($table);
 		foreach ($join as $col => $value) {
 			$this->db->join($col,$value);
 		}
+		$this->db->where($where);
 		$query = $this->db->get();
 		return $query->result_array();
 	}

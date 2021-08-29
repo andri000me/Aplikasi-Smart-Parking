@@ -27,7 +27,11 @@
                             <span><?php echo $value->tanggal?></span>
                         </div>
                         <div class="col-4">
-                            <a href="<?php echo base_url().'tiket/tiket/'.$value->id_transaksi ?>" type="button" class="btn btn-warning mt-3">Lihat</a>
+                             <?php if ($value->status == 0 ) { ?>
+                            <a href="<?php echo base_url().'tiket/tiket/'.$value->id_transaksi ?>" type="button" class="btn btn-warning mt-3">Bayar</a>
+                            <?php } else if ($value->status == 1 ) { ?>
+                            <a href="<?php echo base_url().'tiket/tiket/'.$value->id_transaksi ?>" type="button" class="btn btn-dark mt-3">Lihat</a>
+                            <?php } ?>
                         </div>
                         <?php if ($value->status == 0 ) { ?>
                         <div class="col-6">

@@ -12,7 +12,7 @@
 </head>
 <body id="splash_screen">
 	<div class="container">
-		<img style="margin-top: 50px;" src="assets/img/logo.png">
+		<img style="margin-top: 50px;" src="<?php echo base_url().'assets/img/logo.png'?>">
 		<h1 class="fw-bold" style="font-family:Arial, Helvetica, sans-serif;">
 			SMART<br>PARKING
 		</h1>

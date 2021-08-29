@@ -32,8 +32,8 @@
 
 			<div class="row">
 				<?php foreach ($tiket as $value) { 
-					$x  = mktime(0, 0, 0, date("m"), date("d"), date("Y"));
-					$namahari = date("l", $x);
+					$x  = $value->tanggal;
+					$namahari = date("l", strtotime($x));
 					 
 					if ($namahari == "Sunday") $namahari = "Minggu";
 					else if ($namahari == "Monday") $namahari = "Senin";
@@ -90,7 +90,7 @@
 			
 			<a href="<?php echo base_url().'Welcome/metode'?>"><submit type="submit" class="btn btn-light border border-primary rounded-pill text-primary mt-1 full_btn" style="width: 100%">Metode Pembayaran Lain</submit></a>
 			<?php } else if ($value->status == 1) { ?>
-			<a href="<?php echo base_url().'report/tiket/'.$this->uri->segment('3')?>"><submit type="submit" class="btn btn-dark rounded-pill full_btn" style="width: 100%">Cetak</submit></a>
+			<a href="<?php echo base_url().'tiket/report/'.$this->uri->segment('3')?>"><submit type="submit" class="btn btn-dark rounded-pill full_btn" style="width: 100%">Cetak</submit></a>
 			<?php } } ?>
 		</div>
 	</form>

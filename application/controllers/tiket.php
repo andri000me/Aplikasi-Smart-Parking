@@ -112,4 +112,15 @@ class tiket extends CI_Controller {
 		$this->Model->editData('detail_lokasi',$where2,$data2);
 		redirect(base_url().'home/home');
 	}	
+
+	public function report() {
+		$where = array('id_transaksi' => $this->uri->segment('3'));
+		$join=array(
+			'akun' => 'transaksi.id_user=akun.nomor_identitas',
+			'detail_lokasi' => 'transaksi.tempat_parkir=detail_lokasi.id_detail'
+		);
+		$data['tiket'] = $this->Model->GetDataJoin('transaksi',$join,'*',$where);
+		$this->load->view('templates/home_header');
+		$this->load->view('tiket/report',$data);
+	}
 }
