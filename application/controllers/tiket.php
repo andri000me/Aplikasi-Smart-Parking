@@ -72,11 +72,11 @@ class tiket extends CI_Controller {
 		$this->Model->tambahData('transaksi',$data);
 		$data2 = array (
 			'status' => 1
-		);
+			);
 
 		$where = array(
 			'id_detail' => $qr_code
-		);
+			);
 		$this->Model->editData('detail_lokasi',$where,$data2);
 		redirect(base_url().'tiket/tiket/'.$id);
 	}
@@ -95,32 +95,43 @@ class tiket extends CI_Controller {
 		$data = array (
 			'status_keluar_masuk' => 1,
 			'jam_keluar' => $time
-		);
+			);
 
 		$where = array(
 			'id_transaksi' => $qr_code
-		);
+			);
 		$this->Model->editData('transaksi',$where,$data);
 
 		$data2 = array (
 			'status' => 0
-		);
+			);
 
 		$where2 = array(
 			'id_detail' => $id_detail
-		);
+			);
 		$this->Model->editData('detail_lokasi',$where2,$data2);
 		redirect(base_url().'home/home');
 	}	
 
-	public function report() {
+	public function cetak_tiket() {
+		date_default_timezone_set('Asia/Jakarta');
+		$this->load->library('dompdf_gen');
 		$where = array('id_transaksi' => $this->uri->segment('3'));
 		$join=array(
 			'akun' => 'transaksi.id_user=akun.nomor_identitas',
 			'detail_lokasi' => 'transaksi.tempat_parkir=detail_lokasi.id_detail'
-		);
-		$data['tiket'] = $this->Model->GetDataJoin('transaksi',$join,'*',$where);
-		$this->load->library('dompdf/autoload.inc'); 
-		$this->load->view('tiket/report',$data);
+			);
+		$data['tiket'] = $this->Model->GetDataJoin('transaksi',$join,'*',$where);		 
+		$this->load->view('tiket/cetak_tiket',$data);
+
+		$paper_size = 'A7';
+		$orientation = 'landscape';
+		$html = $this->output->get_output();
+		$this->dompdf->set_paper($paper_size,$orientation);
+
+		$this->dompdf->load_html($html);
+		$this->dompdf->render();
+		$time = date("Y-m-d h:i:sa");
+		$this->dompdf->stream($time . '_Tiket Parkir.pdf', array('Attachment' => 0));
 	}
 }
