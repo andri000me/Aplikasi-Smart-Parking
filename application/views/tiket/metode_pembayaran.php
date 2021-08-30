@@ -1,8 +1,15 @@
 <body>
     <div class="container">
-        <h2 class="fw-bold fs-1 mx-1 mt-3 mb-3"><i class="fas fa-money-bill-wave-alt"></i> Metode Pembayaran</h2>
+        <div class="row mt-3">
+            <div class="col-1">
+                <i class="fas fa-money-bill-wave-alt fa-2x"></i>
+            </div>
+            <div class="col mx-1">
+                <h2 class="fw-bold fs-1 mx-1">Metode Pembayaran</h2>
+            </div>
+        </div>
 
-        <h5 class="mx-2">Pilih Metode Pembayaran Lain</h5>
+        <h2>Pilih Metode Pembayaran Lain</h2>
 
         <div class="col-sm-4 col-md-4 col-lg-4 kl">
             <input type="radio" id="gopay" name="metode_pembayaran" value="Go-Pay">
@@ -31,12 +38,9 @@
                 <input type="number" class="form-control rounded-end" placeholder="Masukkan pin" aria-label="Masukkan pin" aria-describedby="basic-addon1">
             </div>
 
-            <a href="<?php echo base_url() . 'home/home' ?>">
-                <submit type="submit" class="btn btn-primary rounded-pill full_btn mt-2">Bayar Sekarang</submit>
-            </a>
+            <a href="<?php echo base_url().'home/home'?>"><submit type="submit" class="btn btn-primary rounded-pill full_btn mt-2">Bayar Sekarang</submit></a>
         </div>
     </div>
 
 </body>
-
 </html>
