@@ -114,24 +114,6 @@ class tiket extends CI_Controller {
 	}	
 
 	public function cetak_tiket() {
-		date_default_timezone_set('Asia/Jakarta');
-		$this->load->library('dompdf_gen');
-		$where = array('id_transaksi' => $this->uri->segment('3'));
-		$join=array(
-			'akun' => 'transaksi.id_user=akun.nomor_identitas',
-			'detail_lokasi' => 'transaksi.tempat_parkir=detail_lokasi.id_detail'
-			);
-		$data['tiket'] = $this->Model->GetDataJoin('transaksi',$join,'*',$where);		 
-		$this->load->view('tiket/cetak_tiket',$data);
-
-		$paper_size = 'A7';
-		$orientation = 'landscape';
-		$html = $this->output->get_output();
-		$this->dompdf->set_paper($paper_size,$orientation);
-
-		$this->dompdf->load_html($html);
-		$this->dompdf->render();
-		$time = date("Y-m-d h:i:sa");
-		$this->dompdf->stream($time . '_Tiket Parkir.pdf', array('Attachment' => 0));
+		base_url()."cetak/scan.php";
 	}
 }
