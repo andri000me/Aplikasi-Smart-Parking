@@ -22,10 +22,10 @@
 		x = 0;
 		setInterval(function () {
 			x++;
-			if(x == 2){
+			if(x == 1){
 				window.location.href = "Welcome/main";
 			}
-		},300)
+		},1000)
 	</script>
 </body>
 </html>

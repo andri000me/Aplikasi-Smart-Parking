@@ -1,9 +1,11 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+defined('BASEPATH') or exit('No direct script access allowed');
 
-class pin extends CI_Controller {
+class Pin extends CI_Controller
+{
 
-	public function __construct(){
+	public function __construct()
+	{
 		parent::__construct();
 		$this->load->model('Model');
 	}
@@ -34,20 +36,19 @@ class pin extends CI_Controller {
 		}
 
 		if ($pin != $this->session->userdata('pin')) {
-			redirect(base_url().'pin/pin1/'.$where);
+			redirect(base_url() . 'pin/pin1/' . $where);
 		} else {
-			$data1 = array (
+			$data1 = array(
 				'harga_tiket' => $harga,
 				'status' => 1
-				);
+			);
 
 			$where1 = array(
 				'id_transaksi' => $where
-				);
-			$this->Model->editData('transaksi',$where1,$data1);
+			);
+			$this->Model->editData('transaksi', $where1, $data1);
 			$this->db->query("UPDATE akun SET saldo = saldo-'$harga' WHERE nomor_identitas = '$id_user'");
-			redirect(base_url().'home/home');
+			redirect(base_url() . 'Home/home');
 		}
 	}
 }
-

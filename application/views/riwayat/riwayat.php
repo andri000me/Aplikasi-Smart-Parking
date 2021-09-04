@@ -28,9 +28,9 @@
                         </div>
                         <div class="col-4">
                              <?php if ($value->status == 0 ) { ?>
-                            <a href="<?php echo base_url().'tiket/tiket/'.$value->id_transaksi ?>" type="button" class="btn btn-warning mt-3">Bayar</a>
+                            <a href="<?php echo base_url().'Tiket/tiket/'.$value->id_transaksi ?>" type="button" class="btn btn-warning mt-3">Bayar</a>
                             <?php } else if ($value->status == 1 ) { ?>
-                            <a href="<?php echo base_url().'tiket/tiket/'.$value->id_transaksi ?>" type="button" class="btn btn-dark mt-3">Lihat</a>
+                            <a href="<?php echo base_url().'Tiket/tiket/'.$value->id_transaksi ?>" type="button" class="btn btn-dark mt-3">Lihat</a>
                             <?php } ?>
                         </div>
                         <?php if ($value->status == 0 ) { ?>
@@ -51,7 +51,7 @@
                     <p class="list">
                         <b></b>
                         <b></b>
-                        <a href="<?php echo base_url().'home/home'?>">
+                        <a href="<?php echo base_url().'Home/home'?>">
                             <i class="fas fa-home fa-2x"></i>
                         </a>
                     </p>
@@ -67,7 +67,7 @@
                     <p class="list active">
                         <b></b>
                         <b></b>
-                        <a href="<?php echo base_url().'riwayat/riwayat'?>"><i class="fas fa-history fa-2x"></i></a>
+                        <a href="<?php echo base_url().'Riwayat/riwayat'?>"><i class="fas fa-history fa-2x"></i></a>
                     </p>
                 </div>  
             </div>

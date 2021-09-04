@@ -1,7 +1,7 @@
   
 <h2 class="pt-2" style="text-align: center; color: blue;">BUAT AKUN BARU</h2>
 
-<form action="<?php echo base_url().'register/register'?>"  method="POST" enctype="multipart/form-data">
+<form action="<?php echo base_url().'Register/register'?>"  method="POST" enctype="multipart/form-data">
 
   <label class="form-group <?=form_error('nama_lengkap') ? 'validation' : 'null'?>" style="margin-bottom: 8px; margin-top: 0px;">NAMA LENGKAP</label>
   <div class="input-group mb-3 ">
@@ -73,7 +73,7 @@
     <div class="input-group-text  <?=form_error('no_pin') ? 'border2' : 'null'?>" id="basic-addon1"  style="height: 42px; margin-top: 0px;">
       <span><i class="bi bi-credit-card-2-front"></i></span>
     </div>
-    <input type="number" class="form-control  <?=form_error('no_pin') ? 'is-invalid' : 'null'?>" value="<?=set_value('no_pin')?>" id="no_pin" name="no_pin" placeholder="Nomor PIN" aria-label="Nomor PIN" aria-describedby="basic-addon1">
+    <input type="tel" minlength="1" maxlength="6" class="form-control  <?=form_error('no_pin') ? 'is-invalid' : 'null'?>" value="<?=set_value('no_pin')?>" id="no_pin" name="no_pin" placeholder="Nomor PIN" aria-label="Nomor PIN" aria-describedby="basic-addon1">
   </div>
   <div class="pesan"><?= form_error('no_pin')?></div>
 
@@ -99,6 +99,6 @@
 
   <button type="submit" class="btn btn-primary rounded-pill" style="width: 100%; margin-top: 20px;">DAFTAR</button>
 
-  <p style="color: blue; text-align: center;" class="text-center">Sudah punya akun? klik <a href="<?php echo base_url().'login/login'?>" style="color: blue">masuk</a></p>
+  <p style="color: blue; text-align: center;" class="text-center">Sudah punya akun? klik <a href="<?php echo base_url().'Login/login'?>" style="color: blue">masuk</a></p>
 
 </form>

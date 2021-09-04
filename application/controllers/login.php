@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class login extends CI_Controller {
+class Login extends CI_Controller {
 
 	function __construct(){
 		parent::__construct();
@@ -36,7 +36,7 @@ class login extends CI_Controller {
 			if ($chek->num_rows() > 0 OR $chek1->num_rows() > 0) {
 				$data_session = $this->db->query("SELECT * FROM akun WHERE email ='$no_telp' OR no_telp='$no_telp'")->row_array();
 				$this->session->set_userdata(array('no_telp' => $no_telp,  'nama_lengkap' => $data_session['nama_lengkap'], 'no_plat' => $data_session['no_plat'], 'nomor_identitas' => $data_session['nomor_identitas'], 'qr_code' => $data_session['qr_code'], 'pin' => $data_session['pin'], 'status_login_admin' => 'sudah_login'));
-				redirect('home/home');
+				redirect('Home/home');
 			} else {
 				$this->session->set_flashdata('Pesan','
 					<script>
@@ -50,14 +50,14 @@ class login extends CI_Controller {
 						});
 					</script>
 					');
-				redirect('login/login');
+				redirect('Login/login');
 			}
 		}
 	}
 
 	function logout(){
 		$this->session->sess_destroy();
-		redirect('login/login');
+		redirect('Login/login');
 	}
 
 }

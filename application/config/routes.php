@@ -60,3 +60,4 @@ $route['saldo'] = 'saldo';
 $route['tiket'] = 'tiket';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
+

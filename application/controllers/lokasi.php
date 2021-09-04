@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class lokasi extends CI_Controller {
+class Lokasi extends CI_Controller {
 
 	public function __construct(){
 		parent::__construct();
@@ -34,7 +34,7 @@ class lokasi extends CI_Controller {
 			$this->load->view('templates/home_header');
 			$this->load->view('lokasi/lokasi',$data);
 		} else {
-			redirect('lokasi/lokasi');
+			redirect('Lokasi/lokasi');
 		}
 	}
 }

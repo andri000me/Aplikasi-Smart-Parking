@@ -23,15 +23,15 @@
 		<div class="clear"></div>
 		<hr>
 		<div class="col-4">
-			<div class="box_icon"><a href="<?php echo base_url().'tiket/scan'?>"><i class="fas fa-qrcode fa-3x"></i></div>
+			<div class="box_icon"><a href="<?php echo base_url().'Tiket/scan'?>"><i class="fas fa-qrcode fa-3x"></i></div>
 			<p>Kode Barcode</p></a>
 		</div>
 		<div class="col-4">
-			<div class="box_icon"><a href="<?php echo base_url().'lokasi/lokasi'?>"><i class="fas fa-parking fa-3x"></i></div>
+			<div class="box_icon"><a href="<?php echo base_url().'Lokasi/lokasi'?>"><i class="fas fa-parking fa-3x"></i></div>
 			<p>Lokasi Parkir</p></a>
 		</div>
 		<div class="col-4">
-			<div class="box_icon"><a href="<?php echo base_url().'saldo/saldo'?>"><i class="far fa-credit-card fa-3x"></i></div>
+			<div class="box_icon"><a href="<?php echo base_url().'Saldo/saldo'?>"><i class="far fa-credit-card fa-3x"></i></div>
 			<p>Isi Saldo</p></a>
 		</div>
 		<div class="clear"></div>
@@ -41,7 +41,7 @@
 			<p class="list active">
 				<b></b>
 				<b></b>
-				<a href="<?php echo base_url().'home/home'?>">
+				<a href="<?php echo base_url().'Home/home'?>">
 					<i class="fas fa-home fa-2x"></i>
 				</a>
 			</p>
@@ -57,7 +57,7 @@
 			<p class="list">
 				<b></b>
 				<b></b>
-				<a href="<?php echo base_url().'riwayat/riwayat'?>"><i class="fas fa-history fa-2x"></i></a>
+				<a href="<?php echo base_url().'Riwayat/riwayat'?>"><i class="fas fa-history fa-2x"></i></a>
 			</p>
 		</div>  
 	</div>

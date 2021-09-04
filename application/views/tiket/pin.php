@@ -2,8 +2,8 @@
 	<div class="container">
 		<div class="container text-center mt-3">
 			<h1>Konfirmasi Pembayaran</h1>
-			<form action="<?php echo base_url().'pin/bayar/'.$this->uri->segment('3')?>" method="POST">
-				<input type="number" id="pin" name="pin" maxlength="6" class="form-control rounded text-center mt-3" placeholder="Masukkan pin" aria-label="pin" aria-describedby="basic-addon1" required>
+			<form action="<?php echo base_url().'Pin/bayar/'.$this->uri->segment('3')?>" method="POST">
+				<input type="tel" id="pin" name="pin" minlength="1" maxlength="6"  class="form-control rounded text-center mt-3" placeholder="Masukkan pin" aria-label="pin"  aria-describedby="basic-addon1" required>
 
 				<input type="submit" class="btn btn-primary rounded-pill full_btn mt-2" value="Konfirmasi Sekarang"></form>
 			</div>

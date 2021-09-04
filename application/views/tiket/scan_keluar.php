@@ -1,7 +1,7 @@
 <body>
     <div style="background-color: blue; height: 60px; "><center><h2 class="pt-3 fw-bold" style="color: white;">Scan QR</h2></center></div>
     <center><h4 style="margin-top: 100px;" >Silahkan scan terlebih dahulu<br> untuk Keluar</h4></center>
-    <div class="container"><center><video id="preview" width="100%"></video></center></div>
+    <div class="container"><center><video id="preview" width="75%"></video></center></div>
     <form ></form>
       <!-- Modal -->
     <div class="close">
@@ -13,7 +13,7 @@
                     </div>
                     <div class="modal-body">
                         <p>Terimakasih sudah parkir</p>
-                        <form method="POST" action="<?php echo base_url().'tiket/scan_keluar1'?>" ><input type="hidden" id="qr_code" name="qr_code">
+                        <form method="POST" action="<?php echo base_url().'Tiket/scan_keluar1'?>" ><input type="hidden" id="qr_code" name="qr_code">
                     </div>
                     <div class="modal-footer">
                         <input type="submit" class="btn btn-primary " style="position: relative; margin-right: 2%;" value="OK"></input>

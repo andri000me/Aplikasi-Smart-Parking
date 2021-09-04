@@ -1,6 +1,6 @@
 <body>      
   <div class="container" >          
-    <form action="<?php echo base_url().'login/login_process' ?>" method="post">
+    <form action="<?php echo base_url().'Login/login_process' ?>" method="post">
       <div class="text-center">
         <img src="<?php echo base_url().'assets/img/logo.png'?>" class="img-thumbnail" alt="..." style="width: 300px; border: 0ch; margin-top: 0px;">
       </div>
@@ -29,6 +29,6 @@
         <a href="<?php echo base_url().'Welcome/lupa_sandi'?>"  style="color: blue;"> Lupa Kata Sandi?</a>
       </div>
       <div class="akun" style="text-align: center; margin-bottom: -10px;" >
-        <p style="color: blue">Belum punya akun? klik <a href="<?php echo base_url().'register'?>" style="color: blue;"> buat akun baru</a></p>
+        <p style="color: blue">Belum punya akun? klik <a href="<?php echo base_url().'Register'?>" style="color: blue;"> buat akun baru</a></p>
       </div>
     </form>
